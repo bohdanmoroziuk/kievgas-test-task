@@ -59,4 +59,8 @@ export class ChartComponent implements OnInit {
     }
     this.lineChartData = _lineChartData;
   }
+
+  public chartClicked(e:any):void { }
+ 
+  public chartHovered(e:any):void { }
 }
