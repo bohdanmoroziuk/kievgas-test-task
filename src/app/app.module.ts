@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ChartComponent } from './chart/chart.component';
 import { UsersComponent } from './users/users.component';
+import { OrderUsersByPipe } from './order-users-by.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     ChartComponent,
-    UsersComponent
+    UsersComponent,
+    OrderUsersByPipe
   ],
   imports: [
     ChartsModule,
