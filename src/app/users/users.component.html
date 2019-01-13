@@ -2,45 +2,45 @@
   <thead>
     <tr>
       <th>
-        <span (click)="setSortParams('id')">
-            User Id
-            <i class="fas fa-caret-down" *ngIf="sortName == 'id' && !sortReverse"></i>
-            <i class="fas fa-caret-up" *ngIf="sortName == 'id' && sortReverse"></i>
+        <span (click)="setSortOptions('id')">
+          User Id
+          <i class="fas fa-caret-down" *ngIf="sortName == 'id' && !sortReverse"></i>
+          <i class="fas fa-caret-up" *ngIf="sortName == 'id' && sortReverse"></i>
         </span>
       </th>
       <th>
-          <span (click)="setSortParams('name')">
-              Name
-              <i class="fas fa-caret-down" *ngIf="sortName == 'name' && !sortReverse"></i>
-              <i class="fas fa-caret-up" *ngIf="sortName == 'name' && sortReverse"></i>
-          </span>
+        <span (click)="setSortOptions('name')">
+          Name
+          <i class="fas fa-caret-down" *ngIf="sortName == 'name' && !sortReverse"></i>
+          <i class="fas fa-caret-up" *ngIf="sortName == 'name' && sortReverse"></i>
+        </span>
       </th>
       <th>
-          <span (click)="setSortParams('username')">
-              Username
-              <i class="fas fa-caret-down" *ngIf="sortName == 'username' && !sortReverse"></i>
-              <i class="fas fa-caret-up" *ngIf="sortName == 'username' && sortReverse"></i>
-          </span>
+        <span (click)="setSortOptions('username')">
+          Username
+          <i class="fas fa-caret-down" *ngIf="sortName == 'username' && !sortReverse"></i>
+          <i class="fas fa-caret-up" *ngIf="sortName == 'username' && sortReverse"></i>
+        </span>
       </th>
       <th>
-          <span (click)="setSortParams('email')">
-              Email
-              <i class="fas fa-caret-down" *ngIf="sortName == 'email' && !sortReverse"></i>
-              <i class="fas fa-caret-up" *ngIf="sortName == 'email' && sortReverse"></i>
-          </span>
+        <span (click)="setSortOptions('email')">
+          Email
+          <i class="fas fa-caret-down" *ngIf="sortName == 'email' && !sortReverse"></i>
+          <i class="fas fa-caret-up" *ngIf="sortName == 'email' && sortReverse"></i>
+        </span>
       </th>
       <th>
-          <span (click)="setSortParams('phone')">
-              Phone
-              <i class="fas fa-caret-down" *ngIf="sortName == 'phone' && !sortReverse"></i>
-              <i class="fas fa-caret-up" *ngIf="sortName == 'phone' && sortReverse"></i>
-          </span>
+        <span (click)="setSortOptions('phone')">
+          Phone
+          <i class="fas fa-caret-down" *ngIf="sortName == 'phone' && !sortReverse"></i>
+          <i class="fas fa-caret-up" *ngIf="sortName == 'phone' && sortReverse"></i>
+        </span>
       </th>
       <th></th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let user of users | orderBy:sortName:sortReverse">
+    <tr *ngFor="let user of users | orderUsersBy:sortName:sortReverse">
       <td>{{user.id}}</td>
       <td>{{user.name}}</td>
       <td>{{user.username}}</td>
